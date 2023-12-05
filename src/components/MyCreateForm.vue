@@ -31,7 +31,7 @@ const props = defineProps({
 const emit = defineEmits(['postCreated', 'canceledCreating']);
 
 const creatingPost = ref({
-  id: props.id,
+  id: props.id + 1,
   title: '',
   body: '',
   userId: 1,
@@ -40,7 +40,7 @@ const creatingPost = ref({
 const createPost = (event) => {
   const postItem = creatingPost.value;
   createPost.value = {
-    id: 123,
+    id: props.id + 1,
     title: '',
     body: '',
     userId: 1,
